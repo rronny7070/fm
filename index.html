@@ -72,10 +72,22 @@
 			background-color: white;
 			font-weight: bold;
 			color: black;
-			left: 130px;
-			top: 0px;
+			left: 0px;
+			top: 65px;
 			position: absolute;
 		}
+        #sa{
+            padding: 18px;
+			;
+			border-radius: 10px;
+			background-color: white;
+			font-weight: bold;
+			color: black;
+			left: 210px;
+			top: 65px;
+			position: absolute;
+            
+        }
 
 		#t {
 
@@ -98,7 +110,7 @@
 			font-weight: bold;
 			color: black;
 			position: absolute;
-			left: 520px;
+			left: 390px;
 			top: 0px;
 		}
 
@@ -111,7 +123,7 @@
 			font-weight: bold;
 			color: black;
 			position: absolute;
-			left: 390px;
+			left: 260px;
 			top: 0px;
 		}
         #fn {
@@ -123,7 +135,7 @@ background-color: white;
 font-weight: bold;
 color: black;
 position: absolute;
-left: 660px;
+left: 530px;
 top: 0px;
 }
 
@@ -136,7 +148,7 @@ top: 0px;
 			font-weight: bold;
 			color: white;
 			position: absolute;
-			left: 260px;
+			left: 130px;
 			top: 0px;
 		}
 
@@ -148,7 +160,7 @@ top: 0px;
 			background-color: white;
 			font-weight: bold;
 			color: black;
-			left: 260px;
+			left: 130px;
 			top: 0px;
 			position: absolute;
 		}
@@ -213,14 +225,6 @@ top: 0px;
             }
         }
         var col = 0;
-        function txt(){
-            if(de==1){
-            var q = prompt('닉네임을 입력해주세요')
-            document.getElementById('tx').innerHTML = "<i>"+q+"</i>";}
-            else{
-                var q = prompt('닉네임을 입력해주세요')
-            document.getElementById('tx').innerHTML =q}
-            }
         
         function color(){
             if(col==0){
@@ -330,6 +334,7 @@ top: 0px;
                 document.getElementById("entry").onclick = function(){div_hide10();};
             }
             
+    
             //숨기기
             function div_hide10() {
                 document.getElementById('nickname').style.display = "block";
@@ -408,18 +413,32 @@ top: 0px;
                 }
                 }
  
-				 }
+                 }
+                 var i = 0 ;
+                 function ip(){
+          if(de == 0){
+          i = document.querySelector('#n').value;
+           document.querySelector('#tx').innerHTML = i;}
+        else{
+            i = document.querySelector('#n').value;
+           document.querySelector('#tx').innerHTML = '<i>'+i+'</i>';} 
+        }
+        
+
+        
+    
             
 	</script>
 	<div style="border: 2px solid black;color:white;background-color:gray;vertical-align:top;border-radius:1em;margin-left:0.5em;font-family:굴림;">  Made By 로니 and PArangSae helped; Font Copyright Belongs to: 눈누<!--굴림--></div>
 	<h1 id="txx" style="vertical-align:middle"><span id="tx">닉네임</span><img id="nickname" src="https://www.playentry.org/data/entrybot-make.png" height=100 style="text-aligh:center;"></h1>
-    <input type ="button"value="닉네임 정하기" onclick="txt()"id ="n"  style="margin-top:3em;margin-left:1em;" >
+    <input type ="text" id ="n" value="닉네임" style="margin-top:3em;margin-left:1em;" >
     <input type ="button"value="글자색 정하기" onclick="color()" id = "t" style="margin-top:3em;margin-left:1em;" >
     <input type ="button"value="글자 기울이기" onclick="deco()" id = "dec" style="margin-top:3em;margin-left:1em;" >
     <input type ="button" value="배경색 정하기" onclick="bgcolors()" id = "bgco" style="margin-top:3em;margin-left:1em;">
     <a id = "b"href="https://noonnu.cc/"></a>
     <input type ="button"value="이모티콘 바꾸기" onclick="div_show10()" id ="entry" style="margin-top:3em;margin-left:1em;"  >
     <input type ="button"value="글씨체 바꾸기" onclick="font()" id ="fn" style="margin-top:3em;margin-left:1em;"  >
+    <input type ="button"value="닉네임 적용하기" onclick="ip()" id ="sa" style="margin-top:3em;margin-left:1em;"  >
     
  
 
